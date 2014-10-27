@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--Author: Shaun Stapleton
+Date created: 10/23/14
+Last Edited: 10/26/14
+Assignment 4 - 494 -->
+
+<html>
+  <head>
+    <title>Weather Checker - Assignment 4</title>
+    <meta charset="UTF-8">
+	<script src="weather.js"></script>
+  </head>
+  <body>
+    <form method='GET' name="Assignment4_Weather">
+	  <b>My Weather Checker</b>
+	  <br>
+      <div>
+        <label for='cityChoice'>City: </label>
+        <input type="text" id='cityChoice'>
+      </div>
+      <div>
+        <label for='stateChoice'>State: </label>
+        <select id='stateChoice'>
+		  <option value="CA">California</option>
+		  <option value="OR">Oregon</option>
+          <option value="WA">Washington</option>          
+        </select>
+      </div>
+	  <br>
+	  <div>
+        <label>Current Temperature</label>
+        <input type="checkbox" name="weather" id="currTemp">
+      </div>      
+      <div>
+        <label>Maximum Temperature</label>
+        <input type="checkbox" name="weather" id="maxTemp">
+      </div>
+      <div>
+        <label>Minimum Temperature</label>
+        <input type="checkbox" name="weather" id="minTemp">
+      </div>
+	  <div>
+        <label>Wind</label>
+        <input type="checkbox" name="weather" id="windChoice">
+      </div> 
+      <br>
+	  <input type="button" value="Save Settings" onclick="saveSettings()">
+      <input type="button" value="Get Weather" onclick="apiWeather()">
+    </form>
+	<br><br>
+	<h3><b>Output</b></h3>
+    <div id="cityOutput">City: </div><br>
+    <div id="stateOutput">State: </div><br>
+    <div id="currOutput">Current Temperature: </div><br>
+    <div id="maxOutput">Today's High: </div><br>
+    <div id="minOutput">Today's Low: </div><br>
+    <div id="windOutput">Wind: </div><br>   
+  </body>
+</html>
