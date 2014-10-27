@@ -53,7 +53,8 @@ function weatherOutput() {
   var ctemp = weather.main.temp + 'F';
   var mtemp = weather.main.temp_max + 'F';
   var ltemp = weather.main.temp_min + 'F';
-  var windy = weather.wind.speed + 'MPH';
+  var windy = weather.wind.speed + ' mph at '
+    + (weather.wind.deg) + ' degrees.';
 
   holdCity.innerHTML = 'City: ' +
     document.getElementById('cityChoice').value;
